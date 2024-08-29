@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://bpv1hn20h8lvh"]
+
+[ext_resource type="PackedScene" uid="uid://d2vjy6wedanwa" path="res://Scenes/PearlDiving/base_enemy.tscn" id="1_nwna5"]
+[ext_resource type="Texture2D" uid="uid://yudq8q0wojhw" path="res://Assets/Sprites/svg-sprites/32bit-moon-jellyfish1.svg" id="2_35yn3"]
+[ext_resource type="Texture2D" uid="uid://dq8vf7ognknvg" path="res://Assets/Sprites/svg-sprites/32bit-moon-jellyfish2.svg" id="3_5s4dw"]
+[ext_resource type="Texture2D" uid="uid://5fnf7u07o8wa" path="res://Assets/Sprites/svg-sprites/32bit-moon-jellyfish3.svg" id="4_bj5ae"]
+[ext_resource type="Texture2D" uid="uid://ls2bjpwvndhp" path="res://Assets/Sprites/svg-sprites/32bit-moon-jellyfish4.svg" id="5_dj48k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_64y1a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_35yn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5s4dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bj5ae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dj48k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bj5ae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5s4dw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="Jellyfish" instance=ExtResource("1_nwna5")]
+scale = Vector2(3, 3)
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_64y1a")
+autoplay = "default"
+frame_progress = 0.872999
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+position = Vector2(-0.5, 0.5)
+scale = Vector2(1.05, 0.95)
+polygon = PackedVector2Array(-9.04762, -2.63158, -5.2381, -7.89474, 4.28571, -7.89474, 9.04762, -2.63158, 7.14286, 1.57895, 6.19048, 7.89474, -5.2381, 7.89474, -8.09524, 1.57895)
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="2"]
+position = Vector2(22, 9.53674e-07)

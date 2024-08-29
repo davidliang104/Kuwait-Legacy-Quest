@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm2vr1jr62xdt"]
+
+[ext_resource type="Script" path="res://Scripts/OudHero/oud_hero.gd" id="1_1hwvg"]
+[ext_resource type="Texture2D" uid="uid://pe42axf5ayit" path="res://Assets/Sprites/OudHero/oud_upscaled.jpg" id="1_wnroj"]
+[ext_resource type="PackedScene" uid="uid://c54rr45jjyqwd" path="res://Scenes/OudHero/oud_button.tscn" id="2_r8tf0"]
+[ext_resource type="AudioStream" uid="uid://b8r5jstvnv38w" path="res://Assets/Sounds/OudHero/C.mp3" id="4_wk7a4"]
+
+[node name="OudHero" type="Node2D"]
+position = Vector2(374, 240)
+script = ExtResource("1_1hwvg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(183, 73)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_wnroj")
+
+[node name="OudButton" parent="." instance=ExtResource("2_r8tf0")]
+offset_left = 292.0
+offset_top = 195.0
+offset_right = 322.0
+offset_bottom = 225.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wk7a4")

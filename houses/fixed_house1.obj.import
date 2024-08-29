@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cx42tfttjvuud"
+path="res://.godot/imported/fixed_house1.obj-e10a7a8b0587ad7c8fac193d8d22e081.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fixed_house1.obj-e10a7a8b0587ad7c8fac193d8d22e081.mesh"]
+
+source_file="res://houses/fixed_house1.obj"
+dest_files=["res://.godot/imported/fixed_house1.obj-e10a7a8b0587ad7c8fac193d8d22e081.mesh", "res://.godot/imported/fixed_house1.obj-e10a7a8b0587ad7c8fac193d8d22e081.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

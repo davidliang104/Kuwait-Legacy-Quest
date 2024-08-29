@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://c54rr45jjyqwd"]
+
+[ext_resource type="Texture2D" uid="uid://c1c8mnuitkadt" path="res://Assets/Sprites/OudHero/button.png" id="1_u5nur"]
+[ext_resource type="Texture2D" uid="uid://coxsckc1ch2x3" path="res://Assets/Sprites/OudHero/button_pressed.png" id="2_h5ywe"]
+[ext_resource type="Script" path="res://Scripts/OudHero/oud_button.gd" id="3_akw2t"]
+[ext_resource type="FontFile" uid="uid://bgcobn5pptvx6" path="res://Assets/Fonts/Abaddon_Fonts/Abaddon-Bold.ttf" id="3_c3plv"]
+[ext_resource type="AudioStream" uid="uid://chrjprnhgyqc" path="res://Assets/Sounds/OudHero/C.wav" id="4_obwei"]
+[ext_resource type="AudioStream" uid="uid://dpbetrbyjkc80" path="res://Assets/Sounds/OudHero/C#.wav" id="5_ga3xb"]
+
+[node name="OudButton" type="TextureButton"]
+offset_right = 30.0
+offset_bottom = 30.0
+scale = Vector2(2.5, 2.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+toggle_mode = true
+texture_normal = ExtResource("1_u5nur")
+texture_pressed = ExtResource("2_h5ywe")
+stretch_mode = 0
+script = ExtResource("3_akw2t")
+track_stream = ExtResource("4_obwei")
+track_stream_alt = ExtResource("5_ga3xb")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -11.0
+offset_right = 9.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_c3plv")
+theme_override_font_sizes/font_size = 24
+text = "C"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayerWhite" type="AudioStreamPlayer2D" parent="."]
+volume_db = 18.0
+
+[node name="AudioStreamPlayerBlack" type="AudioStreamPlayer2D" parent="."]
+volume_db = 18.0
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="finished" from="AudioStreamPlayerWhite" to="." method="_on_audio_stream_player_2d_finished"]

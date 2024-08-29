@@ -1,0 +1,35 @@
+~ riddle_master
+
+if GameState.solved_all_riddles == false
+	Wheel Owner: Oh!\nYou want a steering wheel?
+	Wheel Owner: Hmm...
+	Wheel Owner: Answer every riddle here...and I might just give one to you.
+else:
+	Ex-Wheel Owner: Great work...\nThe wheel has been delivered to your home.
+=> END
+
+~ riddler1
+if GameState.solved_riddles[1] == false:
+	Riddler: Here's a juicy one!
+	Riddler: I have no doors or windows, yet I'm filled with golden treasures.\nWhat am I?
+else:
+	Riddler: Good job! Go on and find the others.
+=> END
+
+~ riddler2
+if GameState.solved_riddles[2] == false:
+	Riddler: This is my riddle.
+	Riddler: What kind of fish doesn't swim?
+else:
+	Riddler: You have already solved my riddle.
+=> END
+
+~ riddler_correct
+Riddler: Correct!
+if GameState.solved_all_riddles == false
+	Riddler: You still have more riddles to solve.
+=> END
+
+~ riddler_incorrect
+Riddler: Incorrect!\nPlease try again.
+=> END

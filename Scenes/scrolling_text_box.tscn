@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw6oh5js2tymh"]
+
+[sub_resource type="Animation" id="Animation_ohv4k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0833333]
+}
+
+[sub_resource type="Animation" id="Animation_tt7dn"]
+resource_name = "text_scroll"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.0833333, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c4lwg"]
+_data = {
+"RESET": SubResource("Animation_ohv4k"),
+"text_scroll": SubResource("Animation_tt7dn")
+}
+
+[node name="ScrollingTextBox" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "helllloooooo"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_c4lwg")
+}

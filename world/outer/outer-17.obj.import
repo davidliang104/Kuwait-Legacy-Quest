@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dqtgj856c42vr"
+path="res://.godot/imported/outer-17.obj-c5b7eb2c8ffd1b079d35cba60b17f53a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/outer-17.obj-c5b7eb2c8ffd1b079d35cba60b17f53a.mesh"]
+
+source_file="res://world/outer/outer-17.obj"
+dest_files=["res://.godot/imported/outer-17.obj-c5b7eb2c8ffd1b079d35cba60b17f53a.mesh", "res://.godot/imported/outer-17.obj-c5b7eb2c8ffd1b079d35cba60b17f53a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

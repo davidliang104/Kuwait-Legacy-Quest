@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://geykyxmqkyoy"
+path="res://.godot/imported/gat_semi_open.obj-e0b7544067a6cc27988618669832afef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/gat_semi_open.obj-e0b7544067a6cc27988618669832afef.mesh"]
+
+source_file="res://world/gat_semi_open.obj"
+dest_files=["res://.godot/imported/gat_semi_open.obj-e0b7544067a6cc27988618669832afef.mesh", "res://.godot/imported/gat_semi_open.obj-e0b7544067a6cc27988618669832afef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

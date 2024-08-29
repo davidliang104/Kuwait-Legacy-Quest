@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b41b5wc55ebxw"
+path="res://.godot/imported/fixed_mosque.obj-42dbca7a0e5c23ba578dfb37e481de35.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fixed_mosque.obj-42dbca7a0e5c23ba578dfb37e481de35.mesh"]
+
+source_file="res://world/fixed_mosque.obj"
+dest_files=["res://.godot/imported/fixed_mosque.obj-42dbca7a0e5c23ba578dfb37e481de35.mesh", "res://.godot/imported/fixed_mosque.obj-42dbca7a0e5c23ba578dfb37e481de35.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

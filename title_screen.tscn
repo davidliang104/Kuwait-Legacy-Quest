@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://gq46kdl6aqf3"]
+
+[ext_resource type="Texture2D" uid="uid://djpg7yvt4wcll" path="res://ui/Screenshot_2024-08-10_153310.png" id="1_wq5xg"]
+[ext_resource type="Texture2D" uid="uid://c7bu5aqpx24kv" path="res://ui/pixil-layer-1.png" id="2_ngce6"]
+[ext_resource type="Texture2D" uid="uid://tq58tojgi078" path="res://ui/pixil-layer-2.png" id="3_hi0p2"]
+[ext_resource type="Script" path="res://Start.gd" id="4_j1ag8"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(867, 453)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-290, -128)
+scale = Vector2(0.665127, 0.716814)
+texture = ExtResource("1_wq5xg")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -304.0
+offset_top = -187.0
+offset_right = -204.0
+offset_bottom = -87.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("2_ngce6")
+
+[node name="Start" type="TextureButton" parent="."]
+offset_left = -467.0
+offset_top = -188.0
+offset_right = -367.0
+offset_bottom = -88.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("3_hi0p2")
+script = ExtResource("4_j1ag8")
+
+[connection signal="button_down" from="Start" to="Start" method="_on_button_down"]

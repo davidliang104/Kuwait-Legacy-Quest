@@ -1,0 +1,366 @@
+[gd_scene load_steps=35 format=3 uid="uid://cplsmkjh4ukky"]
+
+[ext_resource type="Script" path="res://Scripts/PearlDiver/pearl_diving.gd" id="1_l85xt"]
+[ext_resource type="PackedScene" uid="uid://cbcnjp71w8i5v" path="res://Scenes/PearlDiving/player.tscn" id="1_sdhe5"]
+[ext_resource type="Script" path="res://Scripts/PearlDiver/PearlGameManager.gd" id="2_pqrdm"]
+[ext_resource type="Script" path="res://Scenes/PearlDiving/AudioStreamPlayer.gd" id="2_sndyg"]
+[ext_resource type="FontFile" uid="uid://bgcobn5pptvx6" path="res://Assets/Fonts/Abaddon_Fonts/Abaddon-Bold.ttf" id="3_8sqxs"]
+[ext_resource type="Script" path="res://Scenes/PearlDiving/PearlLabel.gd" id="3_63x1h"]
+[ext_resource type="Texture2D" uid="uid://k5xmuqimokpq" path="res://Assets/Sprites/PearlDiving/sea_background.png" id="3_ykal0"]
+[ext_resource type="Texture2D" uid="uid://cl2niabm3t072" path="res://Assets/Sprites/PearlDiving/farground.png" id="4_imds2"]
+[ext_resource type="Texture2D" uid="uid://bdllk43w21i3e" path="res://Assets/Sprites/PearlDiving/anchor.png" id="5_5g0ax"]
+[ext_resource type="AudioStream" uid="uid://c60ffksaj3pf" path="res://Assets/Sounds/PearlDiving/nemoscape1-54660.mp3" id="5_ixr22"]
+[ext_resource type="Texture2D" uid="uid://cnrbh0rr80fsc" path="res://Assets/Sprites/PearlDiving/mid_background.png" id="5_t1oe4"]
+[ext_resource type="PackedScene" uid="uid://cum8ievik8peo" path="res://Scenes/PearlDiving/shark.tscn" id="6_55whu"]
+[ext_resource type="Texture2D" uid="uid://begc2fkdnni87" path="res://Assets/Sprites/PearlDiving/foreground.png" id="6_r3bn0"]
+[ext_resource type="PackedScene" uid="uid://bpv1hn20h8lvh" path="res://Scenes/PearlDiving/jellyfish.tscn" id="8_kxk6f"]
+[ext_resource type="Texture2D" uid="uid://cjt3hynfm28pq" path="res://Assets/Sprites/svg-sprites/24bit-seaturtle1.svg" id="9_kr32q"]
+[ext_resource type="PackedScene" uid="uid://lb3q2djt2o1h" path="res://Scenes/PearlDiving/pearl.tscn" id="10_dwqvj"]
+[ext_resource type="Texture2D" uid="uid://cv0e34yypveuk" path="res://Assets/Sprites/svg-sprites/24bit-seaturtle2.svg" id="10_wmh14"]
+[ext_resource type="Texture2D" uid="uid://c63unwe3antdi" path="res://Assets/Sprites/PearlDiving/bubble.png" id="11_7infk"]
+[ext_resource type="Texture2D" uid="uid://cev1nk0c1sclc" path="res://Assets/Sprites/svg-sprites/8bit-seahorse1.svg" id="11_bp7s5"]
+[ext_resource type="Texture2D" uid="uid://4lc8qe2sevej" path="res://Assets/Sprites/svg-sprites/24bit-seaturtle3.svg" id="11_kw31g"]
+[ext_resource type="Texture2D" uid="uid://3bpw5yc7atly" path="res://Assets/Sprites/svg-sprites/8bit-seahorse2.svg" id="12_dbw1v"]
+[ext_resource type="Texture2D" uid="uid://nnwekt2pa331" path="res://Assets/Sprites/svg-sprites/24bit-seaturtle4.svg" id="12_glkee"]
+[ext_resource type="Texture2D" uid="uid://cmts0oslgkkdx" path="res://Assets/Sprites/svg-sprites/24bit-seaturtle5.svg" id="13_upt2b"]
+[ext_resource type="Texture2D" uid="uid://ehj8xxfli372" path="res://Assets/Sprites/svg-sprites/24bit-seaturtle6.svg" id="14_aq62r"]
+[ext_resource type="AudioStream" uid="uid://cqu017pe60tsc" path="res://Assets/Sounds/short-success-sound-glockenspiel-treasure-video-game-6346.mp3" id="14_fmgrc"]
+[ext_resource type="PackedScene" uid="uid://du5r0e631gy3q" path="res://Scenes/PearlDiving/ship.tscn" id="14_v6vli"]
+[ext_resource type="Script" path="res://Scripts/PearlDiver/Bubble.gd" id="21_irqna"]
+[ext_resource type="AudioStream" uid="uid://chk3tiby1v1ur" path="res://Assets/Sounds/PearlDiving/bubblebeam-41985.mp3" id="25_gv0kj"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j1jqt"]
+normal = Vector2(0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ke4d3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_kr32q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wmh14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kw31g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_glkee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_upt2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_aq62r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y5uxi"]
+normal = Vector2(-0.821346, 0.57043)
+distance = 71.1871
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p2374"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_bp7s5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dbw1v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mwn7x"]
+radius = 114.684
+
+[sub_resource type="GDScript" id="GDScript_6shnp"]
+script/source = "extends Camera2D
+
+@export var speed: float = 0.0
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _physics_process(delta):
+	position.x += speed * delta
+	#print(position.x)
+"
+
+[node name="PearlDiving" type="Node2D"]
+script = ExtResource("1_l85xt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("2_sndyg")
+
+[node name="PearlGameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_pqrdm")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -218.0
+offset_bottom = 133.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("3_8sqxs")
+theme_override_font_sizes/font_size = 40
+text = "Health"
+script = ExtResource("3_63x1h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_j1jqt")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(98, 1057)
+rotation = 3.13801
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("WorldBoundaryShape2D_j1jqt")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
+follow_viewport_enabled = true
+scroll_offset = Vector2(1, 0)
+scroll_ignore_camera_zoom = true
+
+[node name="Background" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(3840, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Background"]
+texture = ExtResource("3_ykal0")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Background"]
+position = Vector2(1920, 0)
+texture = ExtResource("3_ykal0")
+centered = false
+
+[node name="Farground" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0)
+motion_mirroring = Vector2(5760, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Farground"]
+texture = ExtResource("4_imds2")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1058)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Farground"]
+position = Vector2(1920, 0)
+texture = ExtResource("4_imds2")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1058)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/Farground"]
+position = Vector2(3840, 0)
+texture = ExtResource("4_imds2")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1058)
+
+[node name="Turtle" type="AnimatedSprite2D" parent="ParallaxBackground"]
+modulate = Color(1, 1, 1, 0.431373)
+self_modulate = Color(1, 1, 1, 0.760784)
+position = Vector2(1683, 222)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_ke4d3")
+
+[node name="Anchor" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(4711, 595)
+rotation = 0.563256
+texture = ExtResource("5_5g0ax")
+
+[node name="Area2D" type="Area2D" parent="ParallaxBackground/Anchor"]
+position = Vector2(3478.51, -2142.26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/Anchor/Area2D"]
+position = Vector2(-3504.46, 2125.53)
+scale = Vector2(2, 2)
+shape = SubResource("WorldBoundaryShape2D_y5uxi")
+
+[node name="AnchorAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ParallaxBackground/Anchor"]
+stream = ExtResource("14_fmgrc")
+
+[node name="Midground" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0)
+motion_mirroring = Vector2(5760, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Midground"]
+texture = ExtResource("5_t1oe4")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1058)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Midground"]
+position = Vector2(1920, 0)
+texture = ExtResource("5_t1oe4")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1058)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/Midground"]
+position = Vector2(3840, 0)
+texture = ExtResource("5_t1oe4")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1058)
+
+[node name="Ship" parent="ParallaxBackground" instance=ExtResource("14_v6vli")]
+position = Vector2(2265, 702)
+
+[node name="Seahorse" type="AnimatedSprite2D" parent="ParallaxBackground"]
+modulate = Color(1, 1, 1, 0.513726)
+position = Vector2(1231, 402)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_p2374")
+autoplay = "default"
+frame_progress = 0.43917
+flip_h = true
+
+[node name="Seahorse2" type="AnimatedSprite2D" parent="ParallaxBackground"]
+modulate = Color(1, 1, 1, 0.513726)
+position = Vector2(2398, 119)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_p2374")
+autoplay = "default"
+frame_progress = 0.170648
+flip_h = true
+
+[node name="Jellyfish" parent="ParallaxBackground" instance=ExtResource("8_kxk6f")]
+position = Vector2(829, 394)
+scale = Vector2(4, 4)
+
+[node name="Jellyfish2" parent="ParallaxBackground" instance=ExtResource("8_kxk6f")]
+position = Vector2(1145, 593)
+scale = Vector2(4, 4)
+
+[node name="Jellyfish3" parent="ParallaxBackground" instance=ExtResource("8_kxk6f")]
+position = Vector2(1224, 208)
+scale = Vector2(4, 4)
+
+[node name="Jellyfish4" parent="ParallaxBackground" instance=ExtResource("8_kxk6f")]
+position = Vector2(1776, 324)
+scale = Vector2(4, 4)
+
+[node name="Shark" parent="ParallaxBackground" instance=ExtResource("6_55whu")]
+position = Vector2(3086, 487)
+scale = Vector2(2, 2)
+speed = 70
+
+[node name="Pearl" parent="ParallaxBackground" instance=ExtResource("10_dwqvj")]
+position = Vector2(1584, 642)
+
+[node name="Pearl2" parent="ParallaxBackground" instance=ExtResource("10_dwqvj")]
+position = Vector2(4286, 651)
+
+[node name="Bubble" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(2164, 220)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_7infk")
+script = ExtResource("21_irqna")
+
+[node name="Area2D" type="Area2D" parent="ParallaxBackground/Bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/Bubble/Area2D"]
+shape = SubResource("CircleShape2D_mwn7x")
+
+[node name="BubbleAudio" type="AudioStreamPlayer2D" parent="ParallaxBackground/Bubble"]
+position = Vector2(-4014, 552)
+scale = Vector2(12, 12)
+stream = ExtResource("25_gv0kj")
+volume_db = 5.0
+
+[node name="Bubble2" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(3436, 343)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_7infk")
+script = ExtResource("21_irqna")
+
+[node name="Area2D" type="Area2D" parent="ParallaxBackground/Bubble2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/Bubble2/Area2D"]
+shape = SubResource("CircleShape2D_mwn7x")
+
+[node name="Player" parent="ParallaxBackground" instance=ExtResource("1_sdhe5")]
+z_index = 1
+position = Vector2(157, 496)
+XSPEED = 150.0
+YSPEED = 160.0
+
+[node name="Camera2D" type="Camera2D" parent="ParallaxBackground/Player"]
+position = Vector2(21.8333, -1)
+scale = Vector2(872.375, -18.0404)
+offset = Vector2(300, 0)
+process_callback = 0
+limit_left = 0
+limit_top = 0
+limit_bottom = 1045
+script = SubResource("GDScript_6shnp")
+
+[node name="Background" type="AudioStreamPlayer2D" parent="ParallaxBackground/Player"]
+position = Vector2(-26.1667, -82.6667)
+scale = Vector2(0.166667, 0.166667)
+stream = ExtResource("5_ixr22")
+volume_db = 5.0
+autoplay = true
+
+[node name="HurtAudio" type="AudioStreamPlayer2D" parent="ParallaxBackground/Player"]
+
+[node name="PearlAudio" type="AudioStreamPlayer2D" parent="ParallaxBackground/Player"]
+
+[node name="Foreground" type="ParallaxLayer" parent="ParallaxBackground"]
+top_level = true
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(5760, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Foreground"]
+texture = ExtResource("6_r3bn0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1058)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/Foreground"]
+position = Vector2(1920, 0)
+texture = ExtResource("6_r3bn0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1058)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/Foreground"]
+position = Vector2(3840, 0)
+texture = ExtResource("6_r3bn0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1058)
+
+[node name="PlayerSpawnPos" type="Marker2D" parent="."]
+position = Vector2(189, 492)
+
+[connection signal="finished" from="AudioStreamPlayer" to="AudioStreamPlayer" method="_on_finished"]
+[connection signal="body_entered" from="ParallaxBackground/Anchor/Area2D" to="." method="_on_anchor_area_2d_body_entered"]
+[connection signal="body_entered_signal" from="ParallaxBackground/Jellyfish" to="." method="_on_body_entered_signal"]
+[connection signal="body_entered_signal" from="ParallaxBackground/Jellyfish2" to="." method="_on_body_entered_signal"]
+[connection signal="body_entered_signal" from="ParallaxBackground/Jellyfish3" to="." method="_on_body_entered_signal"]
+[connection signal="body_entered_signal" from="ParallaxBackground/Jellyfish4" to="." method="_on_body_entered_signal"]
+[connection signal="body_entered_signal" from="ParallaxBackground/Shark" to="." method="_on_body_entered_signal"]
+[connection signal="body_entered" from="ParallaxBackground/Pearl" to="." method="_on_pearl_body_entered"]
+[connection signal="body_entered" from="ParallaxBackground/Pearl2" to="." method="_on_pearl_body_entered"]
+[connection signal="body_entered" from="ParallaxBackground/Bubble/Area2D" to="ParallaxBackground/Bubble" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="ParallaxBackground/Bubble2/Area2D" to="ParallaxBackground/Bubble2" method="_on_area_2d_body_entered"]
